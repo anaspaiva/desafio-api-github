@@ -1,0 +1,19 @@
+@import 'reset';
+@import 'variaveis';
+
+
+body {
+    background-color: $azul-escuro;
+    font-family: $fonte;
+    color: $ciano-claro;
+    font-size: 25px;
+    font-weight: bold;
+    min-height: 100Vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
