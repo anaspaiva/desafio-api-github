@@ -17,10 +17,11 @@
 
 <body>
   <main>
-    <div class="container-geral">
+    <div class="box-geral">
       <div class="topo-box">
         <h1 class="titulo">devfinder</h1>
       </div>
+
       <div class="input-user">
         <label for="input">
           <input type="search" id="input" name="inserir-user" placeholder="Pesquise o username...">
@@ -29,20 +30,61 @@
       </div>
 
       <div class="usuarios-box">
-        <div class="box-perfil">
+        <div class="box-1-perfil">
           <div class="cabecalho-perfil">
             <img class="icon" src="./assets/favicon-32x32.png" alt="imagem do usuário">
+            <div class="info-usuario">
+              <div class="dados-principais">
+                <span class="nome">Nome</span>
+                <span class="user">User</span>
+              </div>
+              <span id="biografia">Lorsit amet consectetur
+                debitis ea repellat?.</span>
+
+            </div>
+            <span class="data-criacao-conta">Desde 10 Jan 2022</span>
           </div>
 
+          <div class="box-2-perfil">
+            <div class="numeros-perfil">
+              <p class="texto">Repositório</p>
+              <span class="num-repositorio">1</span>
+            </div>
+
+
+            <div class="numeros-perfil">
+              <p class="texto">Seguidores</p>
+              <span class="seguidores" id="num">2</span>
+            </div>
+
+            <div class="numeros-perfil">
+              <p class="texto">Seguindo</p>
+              <span class="seguindo">3</span>
+            </div>
+          </div>
+
+          <div class="rodape-geral">
+            <div class="rodape-perfil">
+              <div class="coluna-1">
+                <div class="img-link"><img src="./assets/icon-location.svg"></div>
+                <p class="localizacao">Minas Gerais</p>
+
+                <div class="img-link"><img src="./assets/icon-website.svg"></div>
+                <p class="pagina-web">link</p>
+              </div>
+
+
+              <div class="coluna-2">
+                <div class="img-link"><img src="./assets/icon-twitter.svg"></div>
+                <p class="twitter">@user</p>
+
+                <div class="img-link"><img src="./assets/icon-company.svg"></div>
+                <p class="empresa">link empresa</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-
-
-
-
-
-
-
     </div>
   </main>
 </body>
