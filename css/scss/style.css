@@ -287,6 +287,7 @@ body {
   background-color: #1f2632;
   border-radius: 15px;
   margin: 20px 30px;
+  margin-left: 150px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -297,7 +298,6 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  margin-left: 150px;
   max-height: 600px;
 }
 
@@ -402,20 +402,40 @@ body {
   max-width: 100px;
 }
 
-@media screen and (max-width: 768px) {
-  #input {
-    max-width: 400px;
-  }
+@media (max-width: 768px) {
   .box-geral {
     max-width: 300px;
+    margin: 30px 0px 0px 67px;
+  }
+  .input-user {
+    max-width: 495px;
+  }
+  .input-user #input {
+    max-width: 350px;
+  }
+  .input-user #input::-webkit-input-placeholder {
+    font-size: 15px;
+  }
+  .input-user #input:-ms-input-placeholder {
+    font-size: 15px;
+  }
+  .input-user #input::-ms-input-placeholder {
+    font-size: 15px;
+  }
+  .input-user #input::placeholder {
+    font-size: 15px;
   }
   .box-1-perfil {
-    margin: 0 20px;
+    margin: 0px 30px;
+    max-width: 500px;
   }
   .box-1-perfil .cabecalho-perfil {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: start;
+  }
+  .box-1-perfil .dados-principais {
+    max-width: 400px;
   }
   .box-1-perfil .dados-principais .nome {
     margin-left: 25px;
@@ -423,9 +443,19 @@ body {
   .box-1-perfil .dados-principais .user {
     margin-left: 25px;
   }
+  .usuarios-box {
+    max-width: 495px;
+  }
   #biografia {
     margin-top: 40px;
     margin-left: -100px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
   .data-criacao-conta {
     margin-left: -234px;
@@ -435,13 +465,15 @@ body {
     margin-bottom: 10px;
   }
   .box-2-perfil {
-    margin-top: 50px;
-    margin-left: -10px;
+    margin: 45px 0px 15px -2px;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    max-width: 440px;
   }
   .rodape-geral {
     min-width: 100px;
     max-width: 300px;
-    margin-left: 60px;
+    margin-left: 35px;
   }
   .rodape-geral .rodape-perfil {
     min-width: 100px;
@@ -464,33 +496,114 @@ body {
   .coluna-2 .empresa {
     max-width: 150px;
   }
-  .img-link {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    margin-right: 5px;
-    max-width: 100px;
-  }
 }
 
-@media screen and (max-width: 576px) {
+@media (max-width: 576px) {
   body {
-    background-color: pink;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    max-height: 100vh;
     max-width: 100vw;
   }
   .box-geral {
-    max-width: 100vw;
+    min-width: 100px;
+    max-width: 380px;
+    margin: 30px 0px 0px 0px;
+  }
+  .titulo {
+    margin: 30px 0px;
+  }
+  .input-user {
+    padding-left: 0px;
+    margin-left: -10px;
+    margin-right: -10px;
+  }
+  .input-user #input {
+    max-width: -webkit-fit-content;
+    max-width: -moz-fit-content;
+    max-width: fit-content;
+    padding-left: 50px;
+  }
+  .input-user #input::-webkit-input-placeholder {
+    display: -webkit-box;
+    display: flex;
+    max-width: 500px;
+    font-size: 13px;
+  }
+  .input-user #input:-ms-input-placeholder {
+    display: -ms-flexbox;
+    display: flex;
+    max-width: 500px;
+    font-size: 13px;
+  }
+  .input-user #input::-ms-input-placeholder {
+    display: -ms-flexbox;
+    display: flex;
+    max-width: 500px;
+    font-size: 13px;
+  }
+  .input-user #input::placeholder {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    max-width: 500px;
+    font-size: 13px;
+  }
+  .input-user .btn-pesquisar {
+    margin-left: -150px;
+  }
+  .input-user .btn-pesquisar:hover {
+    -webkit-transform: none;
+            transform: none;
+  }
+  .box-1-perfil {
+    margin: 0px;
+    display: inline;
+  }
+  .box-1-perfil .cabecalho-perfil {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+    margin-left: 10px;
+  }
+  #biografia {
+    margin-top: 35px;
+    padding-bottom: 40px;
+    margin-left: -90px;
+    display: inline;
+    max-width: 300px;
+  }
+  .data-criacao-conta {
+    margin-left: -185px;
+  }
+  .usuarios-box {
+    max-width: 400px;
+    height: 450px;
+    margin: 0px -10px;
+  }
+  .box-2-perfil {
+    margin: 60px 13px 13px 13px;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    max-width: 400px;
+  }
+  .texto {
+    font-size: 10px;
+  }
+  .num {
+    font-size: 12px;
+  }
+  .rodape-geral {
+    min-width: 100px;
+    max-width: 300px;
+    margin-left: 35px;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+  }
+  .rodape-geral .rodape-perfil {
+    display: block;
+    min-width: 100px;
+    max-width: 300px;
+    margin-left: 0px;
   }
 }
 /*# sourceMappingURL=style.css.map */
