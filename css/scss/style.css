@@ -85,7 +85,8 @@ body {
 
 .box-geral {
   margin: 30px;
-  min-width: 600px;
+  min-width: 500px;
+  max-width: 700px;
 }
 
 .titulo {
@@ -118,7 +119,7 @@ body {
   margin: 10px;
 }
 
-.input-user #input {
+.input-user #inserir-user {
   border: none;
   outline: none;
   background: none;
@@ -137,22 +138,22 @@ body {
   margin: 10px;
 }
 
-.input-user #input::-webkit-input-placeholder {
+.input-user #inserir-user::-webkit-input-placeholder {
   color: #cee3e9;
   font-size: 18px;
 }
 
-.input-user #input:-ms-input-placeholder {
+.input-user #inserir-user:-ms-input-placeholder {
   color: #cee3e9;
   font-size: 18px;
 }
 
-.input-user #input::-ms-input-placeholder {
+.input-user #inserir-user::-ms-input-placeholder {
   color: #cee3e9;
   font-size: 18px;
 }
 
-.input-user #input::placeholder {
+.input-user #inserir-user::placeholder {
   color: #cee3e9;
   font-size: 18px;
 }
@@ -191,14 +192,15 @@ body {
   margin: 10px;
   min-width: 300px;
   min-height: 200px;
-  max-height: 350px;
+  max-height: 600px;
 }
 
 .box-1-perfil .cabecalho-perfil {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  min-height: 100px;
+  min-height: 120px;
+  max-width: 700px;
   margin-top: 20px;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
@@ -219,7 +221,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  max-height: 70px;
+  max-height: 150px;
   font-size: 16px;
   font-weight: bold;
 }
@@ -236,6 +238,7 @@ body {
       -ms-flex-pack: start;
           justify-content: start;
   padding-left: 10px;
+  max-width: 300px;
 }
 
 .box-1-perfil .dados-principais .nome {
@@ -266,6 +269,8 @@ body {
   font-size: 13px;
   word-wrap: break-word;
   padding-left: 10px;
+  padding-bottom: 10px;
+  max-width: 400px;
 }
 
 .box-1-perfil .data-criacao-conta {
@@ -278,9 +283,9 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  padding-top: 3px;
+  max-width: 220px;
+  max-height: 50px;
+  padding-top: 10px;
 }
 
 .box-2-perfil {
@@ -403,6 +408,9 @@ body {
 }
 
 @media (max-width: 768px) {
+  body {
+    max-width: 800vw;
+  }
   .box-geral {
     max-width: 300px;
     margin: 30px 0px 0px 67px;
@@ -410,19 +418,19 @@ body {
   .input-user {
     max-width: 495px;
   }
-  .input-user #input {
+  .input-user #inserir-user {
     max-width: 350px;
   }
-  .input-user #input::-webkit-input-placeholder {
+  .input-user #inserir-user::-webkit-input-placeholder {
     font-size: 15px;
   }
-  .input-user #input:-ms-input-placeholder {
+  .input-user #inserir-user:-ms-input-placeholder {
     font-size: 15px;
   }
-  .input-user #input::-ms-input-placeholder {
+  .input-user #inserir-user::-ms-input-placeholder {
     font-size: 15px;
   }
-  .input-user #input::placeholder {
+  .input-user #inserir-user::placeholder {
     font-size: 15px;
   }
   .box-1-perfil {
@@ -516,31 +524,31 @@ body {
     margin-left: -10px;
     margin-right: -10px;
   }
-  .input-user #input {
+  .input-user #inserir-user {
     max-width: -webkit-fit-content;
     max-width: -moz-fit-content;
     max-width: fit-content;
     padding-left: 50px;
   }
-  .input-user #input::-webkit-input-placeholder {
+  .input-user #inserir-user::-webkit-input-placeholder {
     display: -webkit-box;
     display: flex;
     max-width: 500px;
     font-size: 13px;
   }
-  .input-user #input:-ms-input-placeholder {
+  .input-user #inserir-user:-ms-input-placeholder {
     display: -ms-flexbox;
     display: flex;
     max-width: 500px;
     font-size: 13px;
   }
-  .input-user #input::-ms-input-placeholder {
+  .input-user #inserir-user::-ms-input-placeholder {
     display: -ms-flexbox;
     display: flex;
     max-width: 500px;
     font-size: 13px;
   }
-  .input-user #input::placeholder {
+  .input-user #inserir-user::placeholder {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -580,7 +588,7 @@ body {
     margin: 0px -10px;
   }
   .box-2-perfil {
-    margin: 60px 13px 13px 13px;
+    margin: 60px 13px 20px 13px;
     -ms-flex-pack: distribute;
         justify-content: space-around;
     max-width: 400px;
@@ -603,7 +611,11 @@ body {
     display: block;
     min-width: 100px;
     max-width: 300px;
-    margin-left: 0px;
+    margin-left: -15px;
+  }
+  .coluna-1,
+  .coluna-2 {
+    margin: 0px 5px;
   }
 }
 /*# sourceMappingURL=style.css.map */
