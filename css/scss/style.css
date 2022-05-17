@@ -83,7 +83,7 @@ body {
           align-items: center;
 }
 
-.box-geral {
+.box-geral-app {
   margin: 30px;
   min-width: 500px;
   max-width: 700px;
@@ -99,7 +99,7 @@ body {
           justify-content: start;
 }
 
-.input-user {
+.input-box {
   background-image: url(../../assets/icon-search.svg);
   background-repeat: no-repeat;
   background-position-x: 25px;
@@ -111,54 +111,43 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   padding: 10px;
   border-radius: 15px;
   margin: 10px;
 }
 
-.input-user #inserir-user {
+.input-box #inserir-user {
   border: none;
   outline: none;
   background: none;
   font-family: "Space mono", monospace;
   color: #cee3e9;
   font-size: 18px;
-  height: 20px;
-  width: 600px;
-  padding-left: 60px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin: 10px;
+  width: 550px;
+  padding: 10px 0px  10px 60px;
 }
 
-.input-user #inserir-user::-webkit-input-placeholder {
+.input-box #inserir-user::-webkit-input-placeholder {
   color: #cee3e9;
   font-size: 18px;
 }
 
-.input-user #inserir-user:-ms-input-placeholder {
+.input-box #inserir-user:-ms-input-placeholder {
   color: #cee3e9;
   font-size: 18px;
 }
 
-.input-user #inserir-user::-ms-input-placeholder {
+.input-box #inserir-user::-ms-input-placeholder {
   color: #cee3e9;
   font-size: 18px;
 }
 
-.input-user #inserir-user::placeholder {
+.input-box #inserir-user::placeholder {
   color: #cee3e9;
   font-size: 18px;
 }
 
-.input-user .btn-pesquisar {
+.input-box .btn-pesquisar {
   background-color: #0079FF;
   border-radius: 10px;
   font-family: "Space mono", monospace;
@@ -168,20 +157,20 @@ body {
   border-color: transparent;
 }
 
-.input-user .btn-pesquisar:hover {
+.input-box .btn-pesquisar:hover {
   cursor: pointer;
   -webkit-transform: scale(1.02);
           transform: scale(1.02);
 }
 
-.usuarios-box {
+.usuarios-box-externo {
   border-radius: 15px;
   padding: 10px;
   margin: 20px 10px;
   background-color: #323a49;
 }
 
-.box-1-perfil {
+.usuarios-box-interno {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -195,7 +184,7 @@ body {
   max-height: 600px;
 }
 
-.box-1-perfil .cabecalho-perfil {
+.usuarios-box-interno .cabecalho-perfil {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -207,13 +196,13 @@ body {
           justify-content: space-evenly;
 }
 
-.box-1-perfil .icon {
+.usuarios-box-interno .icon {
   width: 90px;
   height: 90px;
   border-radius: 90px;
 }
 
-.box-1-perfil .info-usuario {
+.usuarios-box-interno .info-usuario {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -221,12 +210,13 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  min-width: 450px;
   max-height: 150px;
   font-size: 16px;
   font-weight: bold;
 }
 
-.box-1-perfil .dados-principais {
+.dados-principais {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -236,44 +226,21 @@ body {
           flex-direction: column;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
-          justify-content: start;
-  padding-left: 10px;
+          justify-content: flex-start;
   max-width: 300px;
 }
 
-.box-1-perfil .dados-principais .nome {
+.dados-principais .nome {
   font-size: 25px;
-  letter-spacing: 2px;
 }
 
-.box-1-perfil .dados-principais .user {
+.dados-principais .user {
   color: #0079FF;
   font-size: 12px;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: start;
-  margin-top: 5px;
-  margin-bottom: 5px;
+  margin: 5px 0;
 }
 
-.box-1-perfil #biografia {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  color: #90a7ad;
-  line-height: 25px;
-  font-size: 13px;
-  word-wrap: break-word;
-  padding-left: 10px;
-  padding-bottom: 10px;
-  max-width: 400px;
-}
-
-.box-1-perfil .data-criacao-conta {
+.data-criacao-conta {
   color: #cee3e9;
   font-size: 13px;
   display: -webkit-box;
@@ -283,22 +250,46 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   max-width: 220px;
   max-height: 50px;
-  padding-top: 10px;
+  padding-top: 7px;
+  margin-top: -63px;
+  padding-left: 235px;
 }
 
-.box-2-perfil {
-  background-color: #1f2632;
-  border-radius: 15px;
-  margin: 20px 30px;
-  margin-left: 150px;
+#biografia {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  color: #90a7ad;
+  line-height: 25px;
+  font-size: 13px;
+  word-wrap: break-word;
+  padding-right: auto;
+  padding-top: 40px;
+  max-width: 450px;
+}
+
+.box-numeros-perfil {
+  background-color: #1f2632;
+  border-radius: 15px;
+  margin: 20px 30px;
+  margin-left: 157px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -322,44 +313,31 @@ body {
 }
 
 .texto {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   font-size: 15px;
   color: #90a7ad;
 }
 
-.num {
-  font-size: 18px;
+#num {
+  font-size: 22px;
 }
 
-.rodape-geral {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+.rodape-box-geral {
   width: 540px;
-  max-height: 800px;
   margin-left: 150px;
   font-size: 14px;
 }
 
-.rodape-geral .rodape-perfil {
+.rodape-box-geral .rodape-perfil {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.coluna-1,
-.coluna-2 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.rodape-box-geral .rodape-perfil .coluna-1,
+.rodape-box-geral .rodape-perfil .coluna-2 {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -372,91 +350,101 @@ body {
   margin: 10px 5px;
 }
 
-.coluna-1 .localizacao,
-.coluna-1 .pagina-web,
-.coluna-1 .twitter,
-.coluna-1 .empresa,
-.coluna-2 .localizacao,
-.coluna-2 .pagina-web,
-.coluna-2 .twitter,
-.coluna-2 .empresa {
-  max-width: 200px;
-  margin: 15px;
-  margin-left: 50px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+.rodape-box-geral .rodape-perfil .coluna-1 .localizacao,
+.rodape-box-geral .rodape-perfil .coluna-1 .pagina-web,
+.rodape-box-geral .rodape-perfil .coluna-1 .twitter,
+.rodape-box-geral .rodape-perfil .coluna-1 .empresa,
+.rodape-box-geral .rodape-perfil .coluna-2 .localizacao,
+.rodape-box-geral .rodape-perfil .coluna-2 .pagina-web,
+.rodape-box-geral .rodape-perfil .coluna-2 .twitter,
+.rodape-box-geral .rodape-perfil .coluna-2 .empresa {
+  max-width: 210px;
+  margin-bottom: 15px;
+  margin-left: 40px;
   margin-top: -20px;
+  word-wrap: break-word;
 }
 
-.img-link {
+.rodape-box-geral .rodape-perfil .img-link {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  margin-right: 5px;
-  max-width: 100px;
 }
 
 @media (max-width: 768px) {
-  body {
-    max-width: 800vw;
-  }
-  .box-geral {
-    max-width: 300px;
-    margin: 30px 0px 0px 67px;
-  }
-  .input-user {
-    max-width: 495px;
-  }
-  .input-user #inserir-user {
-    max-width: 350px;
-  }
-  .input-user #inserir-user::-webkit-input-placeholder {
-    font-size: 15px;
-  }
-  .input-user #inserir-user:-ms-input-placeholder {
-    font-size: 15px;
-  }
-  .input-user #inserir-user::-ms-input-placeholder {
-    font-size: 15px;
-  }
-  .input-user #inserir-user::placeholder {
-    font-size: 15px;
-  }
-  .box-1-perfil {
-    margin: 0px 30px;
+  .box-geral-app {
+    margin: 0px;
+    min-width: 200px;
     max-width: 500px;
   }
-  .box-1-perfil .cabecalho-perfil {
+  .input-box {
+    max-width: 495px;
+  }
+  .input-box #inserir-user {
+    width: 350px;
+  }
+  .input-box #inserir-user::-webkit-input-placeholder {
+    font-size: 15px;
+  }
+  .input-box #inserir-user:-ms-input-placeholder {
+    font-size: 15px;
+  }
+  .input-box #inserir-user::-ms-input-placeholder {
+    font-size: 15px;
+  }
+  .input-box #inserir-user::placeholder {
+    font-size: 15px;
+  }
+  .usuarios-box-externo {
+    max-width: 500px;
+  }
+  .usuarios-box-interno {
+    margin: 0px 30px;
+  }
+  .usuarios-box-interno .cabecalho-perfil {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    max-height: 120px;
+    max-width: 500px;
+    margin-top: 20px;
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: start;
   }
-  .box-1-perfil .dados-principais {
+  .usuarios-box-interno .dados-principais {
     max-width: 400px;
   }
-  .box-1-perfil .dados-principais .nome {
+  .usuarios-box-interno .dados-principais .nome {
     margin-left: 25px;
   }
-  .box-1-perfil .dados-principais .user {
+  .usuarios-box-interno .dados-principais .user {
     margin-left: 25px;
   }
-  .usuarios-box {
-    max-width: 495px;
+  .usuarios-box-interno .info-usuario {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    min-width: 100px;
+    min-width: 300px;
+    max-height: 10px;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  .data-criacao-conta {
+    display: inline;
+    margin-left: -210px;
+    margin-top: -5px;
   }
   #biografia {
-    margin-top: 40px;
-    margin-left: -100px;
+    margin-left: -90px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -464,54 +452,50 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    padding-top: 10px;
   }
-  .data-criacao-conta {
-    margin-left: -234px;
-    -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: flex-end;
-    margin-bottom: 10px;
-  }
-  .box-2-perfil {
-    margin: 45px 0px 15px -2px;
+  .box-numeros-perfil {
+    margin: 80px 0px 15px -2px;
     -ms-flex-pack: distribute;
         justify-content: space-around;
     max-width: 440px;
   }
-  .rodape-geral {
-    min-width: 100px;
+  .rodape-box-geral {
+    min-width: 50px;
     max-width: 300px;
     margin-left: 35px;
   }
-  .rodape-geral .rodape-perfil {
-    min-width: 100px;
+  .rodape-box-geral .rodape-perfil {
+    min-width: 50px;
     max-width: 300px;
-    margin-left: -60px;
+    margin-left: -40px;
   }
-  .coluna-1,
-  .coluna-2 {
-    width: 100px;
+  .rodape-box-geral .rodape-perfil .coluna-1,
+  .rodape-box-geral .rodape-perfil .coluna-2 {
+    max-width: 50px;
     margin: 10px 0px;
     padding: 0px;
   }
-  .coluna-1 .localizacao,
-  .coluna-1 .pagina-web,
-  .coluna-1 .twitter,
-  .coluna-1 .empresa,
-  .coluna-2 .localizacao,
-  .coluna-2 .pagina-web,
-  .coluna-2 .twitter,
-  .coluna-2 .empresa {
-    max-width: 150px;
+  .rodape-box-geral .rodape-perfil .coluna-1 .localizacao,
+  .rodape-box-geral .rodape-perfil .coluna-1 .pagina-web,
+  .rodape-box-geral .rodape-perfil .coluna-1 .twitter,
+  .rodape-box-geral .rodape-perfil .coluna-1 .empresa,
+  .rodape-box-geral .rodape-perfil .coluna-2 .localizacao,
+  .rodape-box-geral .rodape-perfil .coluna-2 .pagina-web,
+  .rodape-box-geral .rodape-perfil .coluna-2 .twitter,
+  .rodape-box-geral .rodape-perfil .coluna-2 .empresa {
+    max-width: 140px;
+    margin-left: 30px;
   }
 }
 
 @media (max-width: 576px) {
   body {
+    min-height: 10vh;
     max-height: 100vh;
     max-width: 100vw;
   }
-  .box-geral {
+  .box-geral-app {
     min-width: 100px;
     max-width: 380px;
     margin: 30px 0px 0px 0px;
@@ -519,76 +503,76 @@ body {
   .titulo {
     margin: 30px 0px;
   }
-  .input-user {
+  .input-box {
     padding-left: 0px;
     margin-left: -10px;
     margin-right: -10px;
+    max-width: 400px;
   }
-  .input-user #inserir-user {
+  .input-box #inserir-user {
     max-width: -webkit-fit-content;
     max-width: -moz-fit-content;
     max-width: fit-content;
-    padding-left: 50px;
+    padding-left: 60px;
   }
-  .input-user #inserir-user::-webkit-input-placeholder {
-    display: -webkit-box;
-    display: flex;
-    max-width: 500px;
-    font-size: 13px;
+  .input-box #inserir-user::-webkit-input-placeholder {
+    font-size: 12px;
   }
-  .input-user #inserir-user:-ms-input-placeholder {
-    display: -ms-flexbox;
-    display: flex;
-    max-width: 500px;
-    font-size: 13px;
+  .input-box #inserir-user:-ms-input-placeholder {
+    font-size: 12px;
   }
-  .input-user #inserir-user::-ms-input-placeholder {
-    display: -ms-flexbox;
-    display: flex;
-    max-width: 500px;
-    font-size: 13px;
+  .input-box #inserir-user::-ms-input-placeholder {
+    font-size: 12px;
   }
-  .input-user #inserir-user::placeholder {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    max-width: 500px;
-    font-size: 13px;
+  .input-box #inserir-user::placeholder {
+    font-size: 12px;
   }
-  .input-user .btn-pesquisar {
+  .input-box .btn-pesquisar {
     margin-left: -150px;
   }
-  .input-user .btn-pesquisar:hover {
+  .input-box .btn-pesquisar:hover {
     -webkit-transform: none;
             transform: none;
   }
-  .box-1-perfil {
+  .usuarios-box-externo {
+    max-width: 400px;
+    height: 520px;
+    margin: 0px -10px;
+  }
+  .usuarios-box-interno {
     margin: 0px;
     display: inline;
   }
-  .box-1-perfil .cabecalho-perfil {
+  .usuarios-box-interno .cabecalho-perfil {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: start;
     margin-left: 10px;
   }
-  #biografia {
-    margin-top: 35px;
-    padding-bottom: 40px;
-    margin-left: -90px;
-    display: inline;
-    max-width: 300px;
+  .usuarios-box-interno .info-usuario {
+    min-width: 40px;
+    max-width: 250px;
+    min-height: 10px;
+    max-height: 60px;
+    word-wrap: break-word;
+  }
+  .dados-principais .nome {
+    max-height: 100px;
+    margin-bottom: -5px;
   }
   .data-criacao-conta {
-    margin-left: -185px;
+    display: block;
+    margin-left: -210px;
+    margin-top: -10px;
   }
-  .usuarios-box {
+  #biografia {
+    margin-top: 8px;
+    margin-left: -83px;
+    display: inline;
     max-width: 400px;
-    height: 450px;
-    margin: 0px -10px;
   }
-  .box-2-perfil {
-    margin: 60px 13px 20px 13px;
+  .box-numeros-perfil {
+    margin: 110px 13px 20px 13px;
     -ms-flex-pack: distribute;
         justify-content: space-around;
     max-width: 400px;
@@ -596,10 +580,16 @@ body {
   .texto {
     font-size: 10px;
   }
-  .num {
-    font-size: 12px;
+  #num {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 25px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
-  .rodape-geral {
+  .rodape-box-geral {
     min-width: 100px;
     max-width: 300px;
     margin-left: 35px;
@@ -607,15 +597,21 @@ body {
         -ms-flex-pack: start;
             justify-content: start;
   }
-  .rodape-geral .rodape-perfil {
+  .rodape-box-geral .rodape-perfil {
     display: block;
     min-width: 100px;
     max-width: 300px;
     margin-left: -15px;
   }
-  .coluna-1,
-  .coluna-2 {
-    margin: 0px 5px;
+  .rodape-box-geral .coluna-1,
+  .rodape-box-geral .coluna-2 {
+    margin: 5px 5px;
+  }
+  .rodape-box-geral .localizacao,
+  .rodape-box-geral .pagina-web,
+  .rodape-box-geral .twitter,
+  .rodape-box-geral .empresa {
+    width: 300px;
   }
 }
 /*# sourceMappingURL=style.css.map */
