@@ -17,15 +17,16 @@ const linkPaginaWeb = document.querySelector('.pagina-web');
 const usernameTwitter = document.querySelector('.twitter');
 const linkEmpresarial = document.querySelector('.empresa');
 
+async function renderiza() {
 
-pesquisarBtn.addEventListener('click', async () => {
     const insereNovoUsuario = inputPesquisaUsuario.value;
-    //inputPesquisaUsuario = null;
 
     try {
         const resposta = await fetch(`https://api.github.com/users/${insereNovoUsuario}`);
 
         if (resposta.status === 200) {
+            document.querySelector(".usuarios-box-externo").style.display = 'block';
+            document.querySelector(".sem-resultados").style.display = 'none';
             const data = await resposta.json();
             console.log(data);
 
@@ -48,9 +49,22 @@ pesquisarBtn.addEventListener('click', async () => {
 
             linkEmpresarial.innerText = (data.company === null || "") ? 'Não disponível' : `${data.company}`;
         }
+        else if (resposta.status === 404) {
+            document.querySelector(".usuarios-box-externo").style.display = 'none';
+            document.querySelector(".sem-resultados").style.display = 'initial';
+        }
     }
-    catch (erro) {
-        console.log(erro);
+    catch (err) {
+        alert("Não foi possível gerar um novo conselho!");
+        console.log(err);
     }
 }
-)
+
+inputPesquisaUsuario.addEventListener('keydown', function (e) {
+    if (e.key == 'Enter') {
+        renderiza();
+    };
+});
+pesquisarBtn.addEventListener('click', () => {
+    renderiza();
+});

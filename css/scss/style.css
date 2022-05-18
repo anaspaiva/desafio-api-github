@@ -123,28 +123,28 @@ body {
   font-family: "Space mono", monospace;
   color: #cee3e9;
   font-size: 18px;
-  width: 550px;
-  padding: 10px 0px  10px 60px;
+  width: 566px;
+  padding: 10px 10px 10px 60px;
 }
 
 .input-box #inserir-user::-webkit-input-placeholder {
   color: #cee3e9;
-  font-size: 18px;
+  font-size: 15px;
 }
 
 .input-box #inserir-user:-ms-input-placeholder {
   color: #cee3e9;
-  font-size: 18px;
+  font-size: 15px;
 }
 
 .input-box #inserir-user::-ms-input-placeholder {
   color: #cee3e9;
-  font-size: 18px;
+  font-size: 15px;
 }
 
 .input-box #inserir-user::placeholder {
   color: #cee3e9;
-  font-size: 18px;
+  font-size: 15px;
 }
 
 .input-box .btn-pesquisar {
@@ -155,12 +155,32 @@ body {
   font-weight: bold;
   padding: 10px;
   border-color: transparent;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+  -webkit-transform: scale(1.01);
+          transform: scale(1.01);
 }
 
 .input-box .btn-pesquisar:hover {
   cursor: pointer;
-  -webkit-transform: scale(1.02);
-          transform: scale(1.02);
+  background-color: transparent;
+  -webkit-box-shadow: 0 0 8px 4px #0079FF inset, 0 0 4px 4px #0079FF;
+          box-shadow: 0 0 8px 4px #0079FF inset, 0 0 4px 4px #0079FF;
+}
+
+.sem-resultados {
+  position: relative;
+  top: 16px;
+  right: 6px;
+  color: red;
+  font-size: 12px;
+  font-weight: bold;
+  width: 137px;
+  display: none;
+}
+
+#hidden {
+  display: none;
 }
 
 .usuarios-box-externo {
@@ -231,7 +251,7 @@ body {
 }
 
 .dados-principais .nome {
-  font-size: 25px;
+  font-size: 20px;
 }
 
 .dados-principais .user {
@@ -242,7 +262,7 @@ body {
 
 .data-criacao-conta {
   color: #cee3e9;
-  font-size: 13px;
+  font-size: 12px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -253,11 +273,13 @@ body {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  max-width: 220px;
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
   max-height: 50px;
-  padding-top: 7px;
+  padding-top: 12px;
   margin-top: -63px;
-  padding-left: 235px;
+  padding-left: 254px;
 }
 
 #biografia {
@@ -275,16 +297,14 @@ body {
   line-height: 25px;
   font-size: 13px;
   word-wrap: break-word;
-  padding-right: auto;
-  padding-top: 40px;
+  padding-top: 30px;
   max-width: 450px;
 }
 
 .box-numeros-perfil {
   background-color: #1f2632;
   border-radius: 15px;
-  margin: 20px 30px;
-  margin-left: 157px;
+  margin: 20px 30px 0 155px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -316,28 +336,31 @@ body {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  font-size: 15px;
+  font-size: 12px;
   color: #90a7ad;
 }
 
 #num {
-  font-size: 22px;
+  font-size: 20px;
 }
 
 .rodape-box-geral {
   width: 540px;
-  margin-left: 150px;
-  font-size: 14px;
+  margin-left: 147px;
+  font-size: 12px;
 }
 
 .rodape-box-geral .rodape-perfil {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-.rodape-box-geral .rodape-perfil .coluna-1,
-.rodape-box-geral .rodape-perfil .coluna-2 {
+.coluna-1,
+.coluna-2 {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -345,27 +368,33 @@ body {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: start;
-  min-width: 250px;
-  max-width: 500px;
-  margin: 10px 5px;
+  min-width: 247px;
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  margin: 10px;
 }
 
-.rodape-box-geral .rodape-perfil .coluna-1 .localizacao,
-.rodape-box-geral .rodape-perfil .coluna-1 .pagina-web,
-.rodape-box-geral .rodape-perfil .coluna-1 .twitter,
-.rodape-box-geral .rodape-perfil .coluna-1 .empresa,
-.rodape-box-geral .rodape-perfil .coluna-2 .localizacao,
-.rodape-box-geral .rodape-perfil .coluna-2 .pagina-web,
-.rodape-box-geral .rodape-perfil .coluna-2 .twitter,
-.rodape-box-geral .rodape-perfil .coluna-2 .empresa {
-  max-width: 210px;
+.coluna-1 .localizacao,
+.coluna-1 .pagina-web,
+.coluna-1 .twitter,
+.coluna-1 .empresa,
+.coluna-2 .localizacao,
+.coluna-2 .pagina-web,
+.coluna-2 .twitter,
+.coluna-2 .empresa {
+  min-width: 200px;
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
   margin-bottom: 15px;
-  margin-left: 40px;
+  margin-left: 35px;
   margin-top: -20px;
   word-wrap: break-word;
 }
 
-.rodape-box-geral .rodape-perfil .img-link {
+.coluna-1 .img-link,
+.coluna-2 .img-link {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -376,15 +405,16 @@ body {
 
 @media (max-width: 768px) {
   .box-geral-app {
-    margin: 0px;
+    margin: -10px;
     min-width: 200px;
     max-width: 500px;
   }
   .input-box {
+    margin-top: -10px;
     max-width: 495px;
   }
   .input-box #inserir-user {
-    width: 350px;
+    width: 400px;
   }
   .input-box #inserir-user::-webkit-input-placeholder {
     font-size: 15px;
@@ -398,11 +428,21 @@ body {
   .input-box #inserir-user::placeholder {
     font-size: 15px;
   }
+  .sem-resultados {
+    position: relative;
+    top: 7px;
+    right: 18px;
+    color: red;
+    font-size: 9px;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
   .usuarios-box-externo {
     max-width: 500px;
   }
   .usuarios-box-interno {
-    margin: 0px 30px;
+    margin: 0 30px;
   }
   .usuarios-box-interno .cabecalho-perfil {
     display: -webkit-box;
@@ -444,7 +484,7 @@ body {
     margin-top: -5px;
   }
   #biografia {
-    margin-left: -90px;
+    margin-left: -80px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -452,10 +492,10 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    padding-top: 10px;
+    padding-top: 2px;
   }
   .box-numeros-perfil {
-    margin: 80px 0px 15px -2px;
+    margin: 85px 0 12px -2px;
     -ms-flex-pack: distribute;
         justify-content: space-around;
     max-width: 440px;
@@ -463,28 +503,29 @@ body {
   .rodape-box-geral {
     min-width: 50px;
     max-width: 300px;
-    margin-left: 35px;
   }
   .rodape-box-geral .rodape-perfil {
     min-width: 50px;
     max-width: 300px;
-    margin-left: -40px;
+    margin-left: -62px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
-  .rodape-box-geral .rodape-perfil .coluna-1,
-  .rodape-box-geral .rodape-perfil .coluna-2 {
+  .coluna-1,
+  .coluna-2 {
     max-width: 50px;
-    margin: 10px 0px;
-    padding: 0px;
+    margin: 10px 0;
+    padding: 0;
   }
-  .rodape-box-geral .rodape-perfil .coluna-1 .localizacao,
-  .rodape-box-geral .rodape-perfil .coluna-1 .pagina-web,
-  .rodape-box-geral .rodape-perfil .coluna-1 .twitter,
-  .rodape-box-geral .rodape-perfil .coluna-1 .empresa,
-  .rodape-box-geral .rodape-perfil .coluna-2 .localizacao,
-  .rodape-box-geral .rodape-perfil .coluna-2 .pagina-web,
-  .rodape-box-geral .rodape-perfil .coluna-2 .twitter,
-  .rodape-box-geral .rodape-perfil .coluna-2 .empresa {
-    max-width: 140px;
+  .coluna-1 .localizacao,
+  .coluna-1 .pagina-web,
+  .coluna-1 .twitter,
+  .coluna-1 .empresa,
+  .coluna-2 .localizacao,
+  .coluna-2 .pagina-web,
+  .coluna-2 .twitter,
+  .coluna-2 .empresa {
     margin-left: 30px;
   }
 }
@@ -493,26 +534,25 @@ body {
   body {
     min-height: 10vh;
     max-height: 100vh;
-    max-width: 100vw;
+    max-width: 600px;
   }
   .box-geral-app {
     min-width: 100px;
     max-width: 380px;
-    margin: 30px 0px 0px 0px;
+    margin: 30px 0 0 0;
   }
   .titulo {
     margin: 30px 0px;
   }
   .input-box {
-    padding-left: 0px;
+    padding-left: 0;
     margin-left: -10px;
     margin-right: -10px;
-    max-width: 400px;
+    min-width: 390px;
+    max-width: 600px;
   }
   .input-box #inserir-user {
-    max-width: -webkit-fit-content;
-    max-width: -moz-fit-content;
-    max-width: fit-content;
+    max-width: 600px;
     padding-left: 60px;
   }
   .input-box #inserir-user::-webkit-input-placeholder {
@@ -531,16 +571,19 @@ body {
     margin-left: -150px;
   }
   .input-box .btn-pesquisar:hover {
-    -webkit-transform: none;
-            transform: none;
+    cursor: none;
+    background-color: #0079FF;
+    border-color: none;
+    -webkit-box-shadow: none;
+            box-shadow: none;
   }
   .usuarios-box-externo {
     max-width: 400px;
     height: 520px;
-    margin: 0px -10px;
+    margin: 0 -10px;
   }
   .usuarios-box-interno {
-    margin: 0px;
+    margin: 0;
     display: inline;
   }
   .usuarios-box-interno .cabecalho-perfil {
@@ -558,11 +601,11 @@ body {
   }
   .dados-principais .nome {
     max-height: 100px;
-    margin-bottom: -5px;
+    padding-bottom: 1px;
   }
   .data-criacao-conta {
     display: block;
-    margin-left: -210px;
+    margin-left: -202px;
     margin-top: -10px;
   }
   #biografia {
@@ -570,6 +613,7 @@ body {
     margin-left: -83px;
     display: inline;
     max-width: 400px;
+    padding-top: 0;
   }
   .box-numeros-perfil {
     margin: 110px 13px 20px 13px;
@@ -591,7 +635,7 @@ body {
   }
   .rodape-box-geral {
     min-width: 100px;
-    max-width: 300px;
+    max-width: 350px;
     margin-left: 35px;
     -webkit-box-pack: start;
         -ms-flex-pack: start;
@@ -599,19 +643,23 @@ body {
   }
   .rodape-box-geral .rodape-perfil {
     display: block;
-    min-width: 100px;
-    max-width: 300px;
     margin-left: -15px;
   }
-  .rodape-box-geral .coluna-1,
-  .rodape-box-geral .coluna-2 {
+  .coluna-1,
+  .coluna-2 {
+    max-width: 350px;
     margin: 5px 5px;
   }
-  .rodape-box-geral .localizacao,
-  .rodape-box-geral .pagina-web,
-  .rodape-box-geral .twitter,
-  .rodape-box-geral .empresa {
-    width: 300px;
+  .coluna-1 .localizacao,
+  .coluna-1 .pagina-web,
+  .coluna-1 .twitter,
+  .coluna-1 .empresa,
+  .coluna-2 .localizacao,
+  .coluna-2 .pagina-web,
+  .coluna-2 .twitter,
+  .coluna-2 .empresa {
+    max-width: 350px;
+    margin-left: 30px;
   }
 }
 /*# sourceMappingURL=style.css.map */

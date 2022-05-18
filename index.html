@@ -24,10 +24,11 @@
 
       <div class="input-box">
         <input type="search" id="inserir-user" name="inserir-user" placeholder="Pesquise o username...">
+        <div class="sem-resultados">Não encontrado</div>
         <button class="btn-pesquisar" id="pesquisar">Pesquisar</button>
       </div>
 
-      <section class="usuarios-box-externo">
+      <section class="usuarios-box-externo" id="hidden">
         <div class="usuarios-box-interno">
           <div class="cabecalho-perfil">
             <img class="icon" src="./assets/favicon-32x32.png" alt="imagem do usuário">
@@ -84,8 +85,9 @@
       </section>
     </div>
   </main>
-</body>
 
-<script src="./js/main.js"></script>
+  <script src="./js/main.js"></script>
+
+</body>
 
 </html>
