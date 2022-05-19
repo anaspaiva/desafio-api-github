@@ -68,6 +68,7 @@ body {
   font-size: 25px;
   font-weight: bold;
   min-height: 100px;
+  max-height: 700px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -87,6 +88,8 @@ body {
   margin: 30px;
   min-width: 500px;
   max-width: 700px;
+  min-height: 100px;
+  max-height: 700px;
 }
 
 .titulo {
@@ -200,15 +203,12 @@ body {
           flex-direction: column;
   margin: 10px;
   min-width: 300px;
-  min-height: 200px;
-  max-height: 600px;
 }
 
 .usuarios-box-interno .cabecalho-perfil {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  min-height: 120px;
   max-width: 700px;
   margin-top: 20px;
   -webkit-box-pack: space-evenly;
@@ -273,13 +273,11 @@ body {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  max-width: -webkit-fit-content;
-  max-width: -moz-fit-content;
-  max-width: fit-content;
+  max-width: 190px;
   max-height: 50px;
   padding-top: 12px;
   margin-top: -63px;
-  padding-left: 254px;
+  padding-left: 270px;
 }
 
 #biografia {
@@ -346,17 +344,18 @@ body {
 
 .rodape-box-geral {
   width: 540px;
-  margin-left: 147px;
+  margin-left: 148px;
   font-size: 12px;
+  width: 400px;
+  word-wrap: break-word;
 }
 
 .rodape-box-geral .rodape-perfil {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  min-width: 240px;
+  max-width: 407px;
 }
 
 .coluna-1,
@@ -368,10 +367,8 @@ body {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: start;
-  min-width: 247px;
-  max-width: -webkit-fit-content;
-  max-width: -moz-fit-content;
-  max-width: fit-content;
+  min-width: 230px;
+  max-width: 300px;
   margin: 10px;
 }
 
@@ -383,10 +380,8 @@ body {
 .coluna-2 .pagina-web,
 .coluna-2 .twitter,
 .coluna-2 .empresa {
-  min-width: 200px;
-  max-width: -webkit-fit-content;
-  max-width: -moz-fit-content;
-  max-width: fit-content;
+  min-width: 100px;
+  max-width: 181px;
   margin-bottom: 15px;
   margin-left: 35px;
   margin-top: -20px;
@@ -429,14 +424,10 @@ body {
     font-size: 15px;
   }
   .sem-resultados {
-    position: relative;
-    top: 7px;
+    top: 12px;
     right: 18px;
-    color: red;
     font-size: 9px;
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
+    text-align: end;
   }
   .usuarios-box-externo {
     max-width: 500px;
@@ -456,7 +447,7 @@ body {
             justify-content: start;
   }
   .usuarios-box-interno .dados-principais {
-    max-width: 400px;
+    max-width: 500px;
   }
   .usuarios-box-interno .dados-principais .nome {
     margin-left: 25px;
@@ -480,7 +471,7 @@ body {
   }
   .data-criacao-conta {
     display: inline;
-    margin-left: -210px;
+    margin-left: -247px;
     margin-top: -5px;
   }
   #biografia {
@@ -492,29 +483,34 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    padding-top: 2px;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    padding-top: 6px;
+    max-height: -webkit-fit-content;
+    max-height: -moz-fit-content;
+    max-height: fit-content;
   }
   .box-numeros-perfil {
-    margin: 85px 0 12px -2px;
+    margin: 95px 0 12px -2px;
     -ms-flex-pack: distribute;
         justify-content: space-around;
-    max-width: 440px;
+    width: 400px;
   }
   .rodape-box-geral {
     min-width: 50px;
     max-width: 300px;
+    margin-left: 92px;
   }
   .rodape-box-geral .rodape-perfil {
-    min-width: 50px;
-    max-width: 300px;
-    margin-left: -62px;
+    width: 300px;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
   }
   .coluna-1,
   .coluna-2 {
-    max-width: 50px;
+    width: 200x;
     margin: 10px 0;
     padding: 0;
   }
@@ -534,38 +530,48 @@ body {
   body {
     min-height: 10vh;
     max-height: 100vh;
-    max-width: 600px;
+    min-width: 100px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .box-geral-app {
-    min-width: 100px;
-    max-width: 380px;
+    width: 340px;
     margin: 30px 0 0 0;
   }
   .titulo {
     margin: 30px 0px;
   }
   .input-box {
-    padding-left: 0;
     margin-left: -10px;
     margin-right: -10px;
-    min-width: 390px;
-    max-width: 600px;
+    min-width: 100px;
+    max-width: 400px;
+    background-position-x: 15px;
   }
   .input-box #inserir-user {
-    max-width: 600px;
-    padding-left: 60px;
+    max-width: 200px;
+    padding-left: 37px;
+    font-size: 15px;
   }
   .input-box #inserir-user::-webkit-input-placeholder {
     font-size: 12px;
+    width: -webkit-fit-content;
+    width: fit-content;
   }
   .input-box #inserir-user:-ms-input-placeholder {
     font-size: 12px;
+    width: fit-content;
   }
   .input-box #inserir-user::-ms-input-placeholder {
     font-size: 12px;
+    width: fit-content;
   }
   .input-box #inserir-user::placeholder {
     font-size: 12px;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
   }
   .input-box .btn-pesquisar {
     margin-left: -150px;
@@ -577,9 +583,18 @@ body {
     -webkit-box-shadow: none;
             box-shadow: none;
   }
+  .sem-resultados {
+    position: relative;
+    top: 11px;
+    right: 85px;
+    text-align: end;
+    width: 55px;
+  }
   .usuarios-box-externo {
     max-width: 400px;
-    height: 520px;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
     margin: 0 -10px;
   }
   .usuarios-box-interno {
@@ -604,22 +619,24 @@ body {
     padding-bottom: 1px;
   }
   .data-criacao-conta {
-    display: block;
-    margin-left: -202px;
     margin-top: -10px;
+    max-width: 180px;
   }
   #biografia {
-    margin-top: 8px;
-    margin-left: -83px;
-    display: inline;
+    margin-top: 15px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     max-width: 400px;
     padding-top: 0;
+    max-height: 500px;
   }
   .box-numeros-perfil {
-    margin: 110px 13px 20px 13px;
     -ms-flex-pack: distribute;
         justify-content: space-around;
+    min-width: 300px;
     max-width: 400px;
+    margin: 110px 20px 20px 20px;
   }
   .texto {
     font-size: 10px;
@@ -634,8 +651,7 @@ body {
             justify-content: center;
   }
   .rodape-box-geral {
-    min-width: 100px;
-    max-width: 350px;
+    width: 300px;
     margin-left: 35px;
     -webkit-box-pack: start;
         -ms-flex-pack: start;
@@ -648,7 +664,7 @@ body {
   .coluna-1,
   .coluna-2 {
     max-width: 350px;
-    margin: 5px 5px;
+    margin: 5px 0px;
   }
   .coluna-1 .localizacao,
   .coluna-1 .pagina-web,

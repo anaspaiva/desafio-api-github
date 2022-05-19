@@ -8,6 +8,7 @@ body{
     font-size: 25px;
     font-weight: bold;
     min-height: 100px;
+    max-height: 700px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -18,6 +19,8 @@ body{
     margin: 30px;
     min-width: 500px;
     max-width: 700px;
+    min-height: 100px;
+    max-height: 700px;
 }
 
 .titulo{
@@ -97,11 +100,10 @@ body{
     flex-direction: column;
     margin: 10px;
     min-width: 300px;
-    min-height: 200px;
-    max-height: 600px;
+    
     .cabecalho-perfil{
         display: flex;
-        min-height: 120px;
+        
         max-width: 700px;
         margin-top: 20px;
         justify-content: space-evenly;
@@ -142,11 +144,11 @@ body{
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-    max-width: fit-content;
+    max-width: 190px;
     max-height: 50px;
     padding-top: 12px;
     margin-top: -63px;
-    padding-left: 254px;
+    padding-left: 270px;
 }
 
 #biografia{
@@ -191,11 +193,14 @@ body{
 
 .rodape-box-geral{
     width: 540px;
-    margin-left: 147px;
+    margin-left: 148px;
     font-size: 12px;
+    width: 400px;
+    word-wrap: break-word;
     .rodape-perfil{
         display: flex;
-        justify-content: center;
+        min-width: 240px;
+        max-width: 407px;
     }
 }
 
@@ -203,15 +208,15 @@ body{
 .coluna-2{
     flex-direction: column;
     justify-content: start;
-    min-width: 247px;
-    max-width: fit-content;
+    min-width: 230px;
+    max-width: 300px;
     margin: 10px;
     .localizacao,
     .pagina-web,
     .twitter,
     .empresa {
-        min-width: 200px;
-        max-width: fit-content;
+        min-width: 100px;
+        max-width: 181px;
         margin-bottom: 15px;
         margin-left: 35px;
         margin-top: -20px;
@@ -220,6 +225,7 @@ body{
     .img-link{
         display: flex;
         align-items: center;
+        
     }
 }
 
@@ -232,6 +238,7 @@ body{
         min-width: 200px;
         max-width: 500px;
     }
+
     .input-box{
         margin-top: -10px;
         max-width: 495px;
@@ -242,13 +249,12 @@ body{
             font-size: 15px;
         }
     }
+
     .sem-resultados{
-        position: relative;
-        top: 7px;
+        top: 12px;
         right: 18px;
-        color: red;
         font-size: 9px;
-        width: fit-content;
+        text-align: end;
     }
     
     .usuarios-box-externo{
@@ -265,7 +271,7 @@ body{
             justify-content: start;
         }
         .dados-principais{
-            max-width: 400px;
+            max-width: 500px;
             .nome{
                 margin-left: 25px;
             }
@@ -286,7 +292,7 @@ body{
     
     .data-criacao-conta{
         display: inline;
-        margin-left: -210px;
+        margin-left: -247px;
         margin-top: -5px;
     }
     
@@ -294,30 +300,29 @@ body{
         margin-left: -80px;
         display: flex;
         flex-direction: row;
-        padding-top: 2px;
+        justify-content: flex-start;
+        padding-top: 6px;
+        max-height: fit-content;
     }
 
     .box-numeros-perfil{
-        margin: 85px 0 12px -2px;
+        margin: 95px 0 12px -2px;
         justify-content: space-around;
-        max-width: 440px;
+        width: 400px;
     }
     
     .rodape-box-geral{
         min-width: 50px;
         max-width: 300px;
-        
+        margin-left: 92px;
         .rodape-perfil{
-            min-width: 50px;
-            max-width: 300px;
-            margin-left: -62px;
-            
+            width: 300px;
             justify-content: center;
         }
     }
     .coluna-1,
     .coluna-2{
-        max-width: 50px;
+        width: 200x;
         margin: 10px 0;
         padding: 0;
         .localizacao,
@@ -336,12 +341,14 @@ body{
     body{
         min-height: 10vh;
         max-height: 100vh;
-        max-width: 600px;
+        min-width: 100px;
+        
+        justify-content: center;
     }
     
     .box-geral-app{
-        min-width: 100px;
-        max-width: 380px;
+        
+        width: 340px;
         margin: 30px 0 0 0;
     }
 
@@ -350,17 +357,19 @@ body{
     }
     
     .input-box{
-        padding-left: 0;
         margin-left: -10px;
         margin-right: -10px;
-        min-width: 390px;
-        max-width: 600px;
+        min-width: 100px;
+        max-width: 400px;
+        background-position-x: 15px;
         #inserir-user{
-            max-width: 600px;
-            padding-left: 60px;
+            max-width: 200px;
+            padding-left: 37px;
+            font-size: 15px;
         }
         #inserir-user::placeholder{
             font-size: 12px;
+            width: fit-content;
         }
         .btn-pesquisar{
             margin-left: -150px;
@@ -372,10 +381,18 @@ body{
             }
         }
     }
-  
+
+    .sem-resultados{
+        position: relative;
+        top: 11px;
+        right: 85px;
+        text-align: end;
+        width: 55px;
+    }
+    
     .usuarios-box-externo{
         max-width: 400px;
-        height: 520px;
+        height: fit-content;
         margin: 0 -10px;
     }
 
@@ -403,23 +420,24 @@ body{
     }
 
     .data-criacao-conta{
-        display: block;
-        margin-left: -202px;
         margin-top: -10px;
+        max-width: 180px;
     }
 
     #biografia{
-        margin-top: 8px;
-        margin-left: -83px;
-        display: inline;
+        margin-top: 15px;
+        display: flex;
         max-width: 400px;
         padding-top: 0;
+        max-height: 500px;
+        
     }
 
     .box-numeros-perfil{
-        margin: 110px 13px 20px 13px;
         justify-content: space-around;
+        min-width: 300px;
         max-width: 400px;
+        margin: 110px 20px 20px 20px;
     }
 
     .texto{
@@ -433,8 +451,7 @@ body{
     }
 
     .rodape-box-geral{
-        min-width: 100px;
-        max-width: 350px;
+        width: 300px;
         margin-left: 35px;
         justify-content: start;
         .rodape-perfil{
@@ -446,7 +463,7 @@ body{
     .coluna-1,
     .coluna-2{
         max-width: 350px;
-        margin: 5px 5px;
+        margin: 5px 0px;
         .localizacao,
         .pagina-web,
         .twitter,

@@ -32,22 +32,20 @@ async function renderiza() {
 
             imagemUsuario.src = `${data.avatar_url}`;
             nomeUsuario.innerText = `${data.name}`;
-            usuarioGit.innerText = `${data.login}`;
+            usuarioGit.innerText = `@${data.login}`;
             biografia.innerText = (data.bio === null) ? 'Não há bio neste perfil' : `${data.bio}`;
-            dataCriacaoConta.innerText = `Desde ${data.created_at}`;
-            repositorios.innerText = `${data.public_repos}`;
-            seguidores.innerText = `${data.followers}`;
-            seguindo.innerText = `${data.following}`;
 
-            localizacao.innerText = (data.location === null) ? 'Não Disponível' : `${data.location}`;
+            const criadoEm = new Date(data.created_at);
+            const dataFormatada = criadoEm.toLocaleDateString('pt-br', { year: 'numeric', month: 'short', day: 'numeric' });
+            dataCriacaoConta.textContent = `Desde ${dataFormatada}`;
 
-
-            linkPaginaWeb.innerHTML = (data.blog === "") ? 'Não Disponível' : `${data.blog}`;
-
-
-            usernameTwitter.innerText = (data.twitter_username === null || "") ? 'Não Disponível' : `${data.twitter_username}`;
-
-            linkEmpresarial.innerText = (data.company === null || "") ? 'Não disponível' : `${data.company}`;
+            repositorios.innerText = `${data.public_repos} `;
+            seguidores.innerText = `${data.followers} `;
+            seguindo.innerText = `${data.following} `;
+            localizacao.innerText = (data.location === null) ? 'Não Disponível' : `${data.location} `;
+            linkPaginaWeb.innerHTML = (data.blog === "") ? 'Não Disponível' : `${data.blog} `;
+            usernameTwitter.innerText = (data.twitter_username === null || "") ? 'Não Disponível' : `${data.twitter_username} `;
+            linkEmpresarial.innerText = (data.company === null || "") ? 'Não disponível' : `${data.company} `;
         }
         else if (resposta.status === 404) {
             document.querySelector(".usuarios-box-externo").style.display = 'none';
@@ -55,7 +53,7 @@ async function renderiza() {
         }
     }
     catch (err) {
-        alert("Não foi possível gerar um novo conselho!");
+        alert("Algo deu errado, verifique e tente novamente.");
         console.log(err);
     }
 }
