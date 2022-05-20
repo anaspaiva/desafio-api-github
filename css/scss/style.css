@@ -65,8 +65,6 @@ body {
   background-color: #1f2632;
   font-family: "Space mono", monospace;
   color: #cee3e9;
-  font-size: 25px;
-  font-weight: bold;
   min-height: 100px;
   max-height: 700px;
   display: -webkit-box;
@@ -100,6 +98,8 @@ body {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: start;
+  font-size: 25px;
+  font-weight: bold;
 }
 
 .input-box {
@@ -252,6 +252,7 @@ body {
 
 .dados-principais .nome {
   font-size: 20px;
+  width: 240px;
 }
 
 .dados-principais .user {
@@ -346,7 +347,7 @@ body {
   width: 540px;
   margin-left: 148px;
   font-size: 12px;
-  width: 400px;
+  width: 460px;
   word-wrap: break-word;
 }
 
@@ -355,7 +356,10 @@ body {
   display: -ms-flexbox;
   display: flex;
   min-width: 240px;
-  max-width: 407px;
+  max-width: 460px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .coluna-1,
@@ -367,7 +371,7 @@ body {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: start;
-  min-width: 230px;
+  min-width: 212px;
   max-width: 300px;
   margin: 10px;
 }
@@ -388,8 +392,8 @@ body {
   word-wrap: break-word;
 }
 
-.coluna-1 .img-link,
-.coluna-2 .img-link {
+.coluna-1 .img-padrao-icones,
+.coluna-2 .img-padrao-icones {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -436,83 +440,48 @@ body {
     margin: 0 30px;
   }
   .usuarios-box-interno .cabecalho-perfil {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     max-height: 120px;
     max-width: 500px;
-    margin-top: 20px;
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: start;
   }
-  .usuarios-box-interno .dados-principais {
-    max-width: 500px;
-  }
-  .usuarios-box-interno .dados-principais .nome {
-    margin-left: 25px;
-  }
+  .usuarios-box-interno .dados-principais .nome,
   .usuarios-box-interno .dados-principais .user {
     margin-left: 25px;
   }
   .usuarios-box-interno .info-usuario {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    min-width: 100px;
     min-width: 300px;
-    max-height: 10px;
-    font-size: 16px;
-    font-weight: bold;
   }
   .data-criacao-conta {
     display: inline;
-    margin-left: -247px;
     margin-top: -5px;
+    padding-left: 25px;
   }
   #biografia {
     margin-left: -80px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    padding-top: 6px;
-    max-height: -webkit-fit-content;
-    max-height: -moz-fit-content;
-    max-height: fit-content;
+    padding-top: 8px;
   }
   .box-numeros-perfil {
-    margin: 95px 0 12px -2px;
+    margin: 80px 0 12px -2px;
     -ms-flex-pack: distribute;
         justify-content: space-around;
     width: 400px;
   }
   .rodape-box-geral {
-    min-width: 50px;
-    max-width: 300px;
-    margin-left: 92px;
+    width: 357px;
+    margin-left: 6px;
   }
   .rodape-box-geral .rodape-perfil {
-    width: 300px;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    max-width: 350px;
   }
   .coluna-1,
   .coluna-2 {
     width: 200x;
     margin: 10px 0;
     padding: 0;
+    min-width: 196px;
+    max-width: 200px;
   }
   .coluna-1 .localizacao,
   .coluna-1 .pagina-web,
@@ -522,6 +491,7 @@ body {
   .coluna-2 .pagina-web,
   .coluna-2 .twitter,
   .coluna-2 .empresa {
+    width: auto;
     margin-left: 30px;
   }
 }
@@ -614,8 +584,10 @@ body {
     max-height: 60px;
     word-wrap: break-word;
   }
-  .dados-principais .nome {
+  .dados-principais .nome,
+  .dados-principais .user {
     max-height: 100px;
+    width: 200px;
     padding-bottom: 1px;
   }
   .data-criacao-conta {
@@ -623,20 +595,15 @@ body {
     max-width: 180px;
   }
   #biografia {
-    margin-top: 15px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    max-width: 400px;
-    padding-top: 0;
-    max-height: 500px;
+    max-width: 300px;
+    padding-top: 15px;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
   }
   .box-numeros-perfil {
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    min-width: 300px;
-    max-width: 400px;
-    margin: 110px 20px 20px 20px;
+    width: 300px;
+    margin: 135px 20px 20px 20px;
   }
   .texto {
     font-size: 10px;

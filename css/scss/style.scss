@@ -5,8 +5,6 @@ body{
     background-color: $azul-escuro;
     font-family: $fonte;
     color: $ciano-claro;
-    font-size: 25px;
-    font-weight: bold;
     min-height: 100px;
     max-height: 700px;
     display: flex;
@@ -27,6 +25,8 @@ body{
     margin: 30px 17px;
     display: flex;
     justify-content: start;
+    font-size: 25px;
+    font-weight: bold;
 }
 
 .input-box{
@@ -103,7 +103,6 @@ body{
     
     .cabecalho-perfil{
         display: flex;
-        
         max-width: 700px;
         margin-top: 20px;
         justify-content: space-evenly;
@@ -130,6 +129,7 @@ body{
     max-width: 300px;
     .nome{
         font-size: 20px;
+        width: 240px;
     }
     .user{
         color: #0079FF;
@@ -195,12 +195,13 @@ body{
     width: 540px;
     margin-left: 148px;
     font-size: 12px;
-    width: 400px;
+    width: 460px;
     word-wrap: break-word;
     .rodape-perfil{
         display: flex;
         min-width: 240px;
-        max-width: 407px;
+        max-width: 460px;
+        align-items: center;
     }
 }
 
@@ -208,13 +209,13 @@ body{
 .coluna-2{
     flex-direction: column;
     justify-content: start;
-    min-width: 230px;
+    min-width: 212px;
     max-width: 300px;
     margin: 10px;
     .localizacao,
     .pagina-web,
     .twitter,
-    .empresa {
+    .empresa{
         min-width: 100px;
         max-width: 181px;
         margin-bottom: 15px;
@@ -222,7 +223,7 @@ body{
         margin-top: -20px;
         word-wrap: break-word;
     }
-    .img-link{
+    .img-padrao-icones{
         display: flex;
         align-items: center;
         
@@ -264,71 +265,58 @@ body{
     .usuarios-box-interno{
         margin: 0 30px;
         .cabecalho-perfil{
-            display: flex;
             max-height: 120px;
             max-width: 500px;
-            margin-top: 20px;
             justify-content: start;
         }
         .dados-principais{
-            max-width: 500px;
-            .nome{
-                margin-left: 25px;
-            }
+            .nome, 
             .user{
                 margin-left: 25px;
             }
         }
         .info-usuario{
-            display: flex;
-            flex-direction: column;
-            min-width: 100px;
             min-width: 300px;
-            max-height: 10px;
-            font-size: 16px;
-            font-weight: bold;
         }
     }
     
     .data-criacao-conta{
         display: inline;
-        margin-left: -247px;
         margin-top: -5px;
+        padding-left: 25px;
     }
     
     #biografia{
         margin-left: -80px;
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-        padding-top: 6px;
-        max-height: fit-content;
+        padding-top: 8px;
     }
 
     .box-numeros-perfil{
-        margin: 95px 0 12px -2px;
+        margin: 80px 0 12px -2px;
         justify-content: space-around;
         width: 400px;
     }
     
     .rodape-box-geral{
-        min-width: 50px;
-        max-width: 300px;
-        margin-left: 92px;
+        width: 357px;
+        margin-left: 6px;
         .rodape-perfil{
-            width: 300px;
-            justify-content: center;
+            max-width: 350px;
         }
     }
+
     .coluna-1,
     .coluna-2{
         width: 200x;
         margin: 10px 0;
         padding: 0;
+        min-width: 196px;
+        max-width: 200px;
         .localizacao,
         .pagina-web,
         .twitter,
         .empresa{
+            width: auto;
             margin-left: 30px;
         }
     }
@@ -342,7 +330,6 @@ body{
         min-height: 10vh;
         max-height: 100vh;
         min-width: 100px;
-        
         justify-content: center;
     }
     
@@ -413,8 +400,10 @@ body{
     }
 
     .dados-principais{
-        .nome{
+        .nome,
+        .user{
             max-height: 100px;
+            width: 200px;
             padding-bottom: 1px;
         }
     }
@@ -425,19 +414,14 @@ body{
     }
 
     #biografia{
-        margin-top: 15px;
-        display: flex;
-        max-width: 400px;
-        padding-top: 0;
-        max-height: 500px;
-        
+        max-width: 300px;
+        padding-top: 15px;
+        height: fit-content;
     }
 
     .box-numeros-perfil{
-        justify-content: space-around;
-        min-width: 300px;
-        max-width: 400px;
-        margin: 110px 20px 20px 20px;
+        width: 300px;
+        margin: 135px 20px 20px 20px;
     }
 
     .texto{
@@ -459,7 +443,6 @@ body{
             margin-left: -15px;
         }
     }
-
     .coluna-1,
     .coluna-2{
         max-width: 350px;
