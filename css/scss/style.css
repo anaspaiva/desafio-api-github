@@ -234,6 +234,7 @@ body {
   max-height: 150px;
   font-size: 16px;
   font-weight: bold;
+  cursor: text;
 }
 
 .dados-principais {
@@ -278,7 +279,7 @@ body {
   max-height: 50px;
   padding-top: 12px;
   margin-top: -63px;
-  padding-left: 270px;
+  margin-left: 270px;
 }
 
 #biografia {
@@ -296,7 +297,7 @@ body {
   line-height: 25px;
   font-size: 13px;
   word-wrap: break-word;
-  padding-top: 30px;
+  margin-top: 30px;
   max-width: 450px;
 }
 
@@ -456,11 +457,15 @@ body {
   .data-criacao-conta {
     display: inline;
     margin-top: -5px;
+    margin-left: 0px;
     padding-left: 25px;
   }
   #biografia {
-    margin-left: -80px;
-    padding-top: 8px;
+    margin: 0 0 -10px -75px;
+    padding-top: 15px;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
   }
   .box-numeros-perfil {
     margin: 80px 0 12px -2px;
@@ -596,7 +601,6 @@ body {
   }
   #biografia {
     max-width: 300px;
-    padding-top: 15px;
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
