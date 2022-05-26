@@ -3,8 +3,7 @@
    License: none (public domain)
 */
 html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
 b, u, i, center,
@@ -14,7 +13,7 @@ table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+time, mark, audio, video, a {
   margin: 0;
   padding: 0;
   border: 0;
@@ -260,6 +259,16 @@ body {
   color: #0079FF;
   font-size: 12px;
   margin: 5px 0;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.dados-principais .user:hover {
+  color: #3ac2e4;
+  text-decoration: underline;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 
 .data-criacao-conta {
@@ -278,7 +287,7 @@ body {
   max-width: 190px;
   max-height: 50px;
   padding-top: 12px;
-  margin-top: -63px;
+  margin-top: -61px;
   margin-left: 270px;
 }
 
@@ -365,25 +374,42 @@ body {
 
 .coluna-1,
 .coluna-2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: start;
   min-width: 212px;
   max-width: 300px;
   margin: 10px;
+  height: 60px;
+}
+
+.coluna-1 a,
+.coluna-2 a {
+  position: relative;
+  margin-left: 35px;
+  top: -18px;
+  padding: 0;
+  text-decoration: none;
+}
+
+.coluna-1 a:visited,
+.coluna-2 a:visited {
+  color: #cee3e9;
 }
 
 .coluna-1 .localizacao,
-.coluna-1 .pagina-web,
-.coluna-1 .twitter,
 .coluna-1 .empresa,
 .coluna-2 .localizacao,
-.coluna-2 .pagina-web,
-.coluna-2 .twitter,
 .coluna-2 .empresa {
   min-width: 100px;
   max-width: 181px;
@@ -391,6 +417,15 @@ body {
   margin-left: 35px;
   margin-top: -20px;
   word-wrap: break-word;
+}
+
+.coluna-1 .pagina-web a,
+.coluna-2 .pagina-web a {
+  position: absolute;
+  margin-left: 33px;
+  top: 462px;
+  padding: 0;
+  text-decoration: none;
 }
 
 .coluna-1 .img-padrao-icones,
@@ -401,6 +436,9 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 @media (max-width: 768px) {
@@ -482,11 +520,16 @@ body {
   }
   .coluna-1,
   .coluna-2 {
+    height: 70px;
     width: 200x;
     margin: 10px 0;
     padding: 0;
     min-width: 196px;
     max-width: 200px;
+  }
+  .coluna-1 a,
+  .coluna-2 a {
+    max-width: 150px;
   }
   .coluna-1 .localizacao,
   .coluna-1 .pagina-web,
@@ -638,11 +681,11 @@ body {
     margin: 5px 0px;
   }
   .coluna-1 .localizacao,
-  .coluna-1 .pagina-web,
+  .coluna-1 a.pagina-web,
   .coluna-1 .twitter,
   .coluna-1 .empresa,
   .coluna-2 .localizacao,
-  .coluna-2 .pagina-web,
+  .coluna-2 a.pagina-web,
   .coluna-2 .twitter,
   .coluna-2 .empresa {
     max-width: 350px;

@@ -28,22 +28,31 @@ async function renderiza() {
             const data = await resposta.json();
             console.log(data);
 
-            imagemUsuario.src = `${data.avatar_url}`;
-            nomeUsuario.textContent = (data.name === null) ? 'Usuário sem nome' : `${data.name}`;
-            usuarioGit.textContent = `@${data.login}`;
-            biografia.textContent = (data.bio === null) ? 'Não há bio neste perfil' : `${data.bio}`;
+            imagemUsuario.src = data.avatar_url;
+            nomeUsuario.textContent = data.name === null ? 'Usuário sem nome' : data.name;
+
+            usuarioGit.textContent = data.login;
+            const git = usuarioGit;
+            git.href = (`https://github.com/${data.login}`)
+
+            biografia.textContent = data.bio === null ? 'Não há bio neste perfil' : data.bio;
 
             const criadoEm = new Date(data.created_at);
             const dataFormatada = criadoEm.toLocaleDateString('pt-br', { day: 'numeric', month: 'short', year: 'numeric' });
             dataCriacaoConta.textContent = `Desde ${dataFormatada}`;
 
-            repositorios.textContent = `${data.public_repos} `;
-            seguidores.textContent = `${data.followers} `;
-            seguindo.textContent = `${data.following} `;
-            localizacao.textContent = (data.location === null) ? 'Não Disponível' : `${data.location} `;
-            linkPaginaWeb.innerHTML = (data.blog === "") ? 'Não Disponível' : `${data.blog} `;
-            usernameTwitter.textContent = (data.twitter_username === null) ? 'Não Disponível' : `${data.twitter_username} `;
-            linkEmpresarial.textContent = (data.company === null) ? 'Não disponível' : `${data.company} `;
+            repositorios.textContent = data.public_repos;
+            seguidores.textContent = data.followers;
+            seguindo.textContent = data.following;
+            localizacao.textContent = data.location === null ? 'Não Disponível' : data.location;
+            linkPaginaWeb.textContent = data.blog === "" ? 'Não disponível' : data.blog;
+            const blog = linkPaginaWeb;
+            blog.href = data.blog;
+            usernameTwitter.textContent = data.twitter_username === null ? 'Não Disponível' : data.twitter_username;
+            const twitter = usernameTwitter;
+            twitter.href = (`https://twitter.com/${data.twitter_username}`)
+
+            linkEmpresarial.textContent = data.company === null ? 'Não disponível' : data.company;
         }
         else if (resposta.status === 404) {
             document.querySelector(".usuarios-box-externo").style.display = 'none';

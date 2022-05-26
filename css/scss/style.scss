@@ -136,6 +136,12 @@ body{
         color: #0079FF;
         font-size: 12px;
         margin: 5px 0;
+        width: fit-content;
+        &:hover{
+            color: $link;
+            text-decoration: underline;
+            transform: scale(1.05);
+        }
     }
 }
 
@@ -148,7 +154,7 @@ body{
     max-width: 190px;
     max-height: 50px;
     padding-top: 12px;
-    margin-top: -63px;
+    margin-top: -61px;
     margin-left: 270px;
 }
 
@@ -206,16 +212,29 @@ body{
     }
 }
 
+
 .coluna-1,
 .coluna-2{
+    display: flex;
     flex-direction: column;
+    align-items: baseline;
     justify-content: start;
     min-width: 212px;
     max-width: 300px;
     margin: 10px;
+    height: 60px;
+    a{
+        position: relative;
+        margin-left: 35px;
+        top: -18px;
+        padding: 0;
+        text-decoration: none;
+        &:visited{
+            color: $ciano-claro;
+        }
+
+    }
     .localizacao,
-    .pagina-web,
-    .twitter,
     .empresa{
         min-width: 100px;
         max-width: 181px;
@@ -224,10 +243,20 @@ body{
         margin-top: -20px;
         word-wrap: break-word;
     }
+    
+    .pagina-web a{
+        position: absolute;
+        margin-left: 33px;
+        top: 462px;
+        padding: 0;
+        text-decoration: none;
+    }
+
+        
     .img-padrao-icones{
         display: flex;
         align-items: center;
-        
+        width: fit-content;
     }
 }
 
@@ -310,11 +339,15 @@ body{
 
     .coluna-1,
     .coluna-2{
+        height: 70px;
         width: 200x;
         margin: 10px 0;
         padding: 0;
         min-width: 196px;
         max-width: 200px;
+        a{ 
+            max-width: 150px;
+        }
         .localizacao,
         .pagina-web,
         .twitter,
@@ -445,12 +478,13 @@ body{
             margin-left: -15px;
         }
     }
+
     .coluna-1,
     .coluna-2{
         max-width: 350px;
         margin: 5px 0px;
         .localizacao,
-        .pagina-web,
+        a.pagina-web,
         .twitter,
         .empresa {
             max-width: 350px;
