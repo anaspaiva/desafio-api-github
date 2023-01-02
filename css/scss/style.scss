@@ -1,7 +1,7 @@
 @import 'reset';
 @import 'variaveis';
 
-body{
+body {
     background-color: $azul-escuro;
     font-family: $fonte;
     color: $ciano-claro;
@@ -13,7 +13,7 @@ body{
     align-items: center;
 }
 
-.box-geral-app{
+.box-geral-app {
     margin: 30px;
     min-width: 500px;
     max-width: 700px;
@@ -21,7 +21,7 @@ body{
     max-height: 700px;
 }
 
-.titulo{
+.titulo {
     margin: 30px 17px;
     display: flex;
     justify-content: start;
@@ -29,7 +29,7 @@ body{
     font-weight: bold;
 }
 
-.input-box{
+.input-box {
     background-image: url(../../assets/icon-search.svg);
     background-repeat: no-repeat;
     background-position-x: 25px;
@@ -40,7 +40,8 @@ body{
     padding: 10px;
     border-radius: 15px;
     margin: 10px;
-    #inserir-user{
+
+    #inserir-user {
         border: none;
         outline: none;
         background: none;
@@ -48,13 +49,15 @@ body{
         color: $ciano-claro;
         font-size: 18px;
         width: 566px;
-        padding: 10px 10px 10px 60px;  
+        padding: 10px 10px 10px 60px;
     }
-    #inserir-user::placeholder{
+
+    #inserir-user::placeholder {
         color: $ciano-claro;
         font-size: 15px;
     }
-    .btn-pesquisar{
+
+    .btn-pesquisar {
         background-color: #0079FF;
         border-radius: 10px;
         font-family: $fonte;
@@ -64,16 +67,17 @@ body{
         border-color: transparent;
         transition: all 300ms ease-in-out;
         transform: scale(1.01);
-        &:hover{
+
+        &:hover {
             cursor: pointer;
             background-color: transparent;
             box-shadow: 0 0 8px 4px #0079FF inset, 0 0 4px 4px #0079FF;
-            
+
         }
     }
 }
 
-.sem-resultados{
+.sem-resultados {
     position: relative;
     top: 16px;
     right: 6px;
@@ -84,35 +88,37 @@ body{
     display: none;
 }
 
-#hidden{
+#hidden {
     display: none;
 }
 
-.usuarios-box-externo{
+.usuarios-box-externo {
     border-radius: 15px;
     padding: 10px;
     margin: 20px 10px;
     background-color: $az-acinzentado-escuro;
 }
 
-.usuarios-box-interno{
+.usuarios-box-interno {
     display: flex;
     flex-direction: column;
     margin: 10px;
     min-width: 300px;
-    
-    .cabecalho-perfil{
+
+    .cabecalho-perfil {
         display: flex;
         max-width: 700px;
         margin-top: 20px;
         justify-content: space-evenly;
     }
-    .icon{
+
+    .icon {
         width: 90px;
         height: 90px;
         border-radius: 90px;
     }
-    .info-usuario{
+
+    .info-usuario {
         display: flex;
         flex-direction: column;
         min-width: 450px;
@@ -123,21 +129,24 @@ body{
     }
 }
 
-.dados-principais{
+.dados-principais {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     max-width: 300px;
-    .nome{
+
+    .nome {
         font-size: 20px;
         width: 240px;
     }
-    .user{
+
+    .user {
         color: #0079FF;
         font-size: 12px;
         margin: 5px 0;
         width: fit-content;
-        &:hover{
+
+        &:hover {
             color: $link;
             text-decoration: underline;
             transform: scale(1.05);
@@ -145,7 +154,7 @@ body{
     }
 }
 
-.data-criacao-conta{
+.data-criacao-conta {
     color: $ciano-claro;
     font-size: 12px;
     display: flex;
@@ -158,7 +167,7 @@ body{
     margin-left: 270px;
 }
 
-#biografia{
+#biografia {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -170,7 +179,7 @@ body{
     max-width: 450px;
 }
 
-.box-numeros-perfil{
+.box-numeros-perfil {
     background-color: $azul-escuro;
     border-radius: 15px;
     margin: 20px 30px 0 155px;
@@ -180,7 +189,7 @@ body{
     max-height: 600px;
 }
 
-.numeros-perfil{
+.numeros-perfil {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -188,23 +197,24 @@ body{
     max-width: 100px;
 }
 
-.texto{
+.texto {
     width: fit-content;
     font-size: 12px;
     color: $ciano-escuro;
 }
 
-#num{
+#num {
     font-size: 20px;
 }
 
-.rodape-box-geral{
+.rodape-box-geral {
     width: 540px;
     margin-left: 148px;
     font-size: 12px;
     width: 460px;
     word-wrap: break-word;
-    .rodape-perfil{
+
+    .rodape-perfil {
         display: flex;
         min-width: 240px;
         max-width: 460px;
@@ -213,7 +223,7 @@ body{
 }
 
 .coluna-1,
-.coluna-2{
+.coluna-2 {
     display: flex;
     flex-direction: column;
     align-items: baseline;
@@ -222,7 +232,8 @@ body{
     max-width: 300px;
     margin: 10px;
     height: 60px;
-    a{
+
+    a {
         position: relative;
         margin-left: 35px;
         top: -18px;
@@ -230,12 +241,14 @@ body{
         text-decoration: none;
         color: $ciano-claro;
         width: 185px;
-        &:visited{
+
+        &:visited {
             color: $ciano-claro;
         }
     }
+
     .localizacao,
-    .empresa{
+    .empresa {
         min-width: 100px;
         max-width: 181px;
         margin-bottom: 15px;
@@ -243,17 +256,22 @@ body{
         margin-top: -20px;
         word-wrap: break-word;
     }
-      
-    .img-padrao-icones{
+
+    .img-padrao-icones {
         display: flex;
         align-items: center;
         width: fit-content;
+
+        .icone {
+            position: relative !important;
+            left: -32px !important;
+        }
     }
 }
 
 
 //Tablet 
-@media (max-width:768px){
+@media (max-width:768px) {
 
     .box-geral-app {
         margin: -10px;
@@ -261,88 +279,97 @@ body{
         max-width: 500px;
     }
 
-    .input-box{
+    .input-box {
         margin-top: -10px;
         max-width: 495px;
-        #inserir-user{
+
+        #inserir-user {
             width: 400px;
         }
-        #inserir-user::placeholder{
+
+        #inserir-user::placeholder {
             font-size: 15px;
         }
     }
 
-    .sem-resultados{
+    .sem-resultados {
         top: 12px;
         right: 18px;
         font-size: 9px;
         text-align: end;
     }
-    
-    .usuarios-box-externo{
+
+    .usuarios-box-externo {
         max-width: 500px;
     }
 
-    .usuarios-box-interno{
+    .usuarios-box-interno {
         margin: 0 30px;
-        .cabecalho-perfil{
+
+        .cabecalho-perfil {
             max-height: 120px;
             max-width: 500px;
             justify-content: start;
         }
-        .dados-principais{
-            .nome, 
-            .user{
+
+        .dados-principais {
+
+            .nome,
+            .user {
                 margin-left: 25px;
             }
         }
-        .info-usuario{
+
+        .info-usuario {
             min-width: 300px;
         }
     }
-    
-    .data-criacao-conta{
+
+    .data-criacao-conta {
         display: inline;
         margin-top: -5px;
         margin-left: 0px;
         padding-left: 25px;
     }
-    
-    #biografia{
+
+    #biografia {
         margin: 0 0 -10px -75px;
         padding-top: 15px;
         height: fit-content;
     }
 
-    .box-numeros-perfil{
+    .box-numeros-perfil {
         margin: 80px 0 12px -2px;
         justify-content: space-around;
         width: 400px;
     }
-    
-    .rodape-box-geral{
+
+    .rodape-box-geral {
         width: 357px;
         margin-left: 6px;
-        .rodape-perfil{
+
+        .rodape-perfil {
             max-width: 350px;
         }
     }
 
     .coluna-1,
-    .coluna-2{
+    .coluna-2 {
         height: 70px;
         width: 200x;
         margin: 10px 0;
         padding: 0;
         min-width: 196px;
         max-width: 200px;
-        a{ 
+
+        a {
             max-width: 150px;
         }
+
         .localizacao,
         .pagina-web,
         .twitter,
-        .empresa{
+        .empresa {
             width: auto;
             margin-left: 30px;
         }
@@ -350,44 +377,48 @@ body{
 }
 
 //Mobile
-    
-@media (max-width:576px){
 
-    body{
+@media (max-width:576px) {
+
+    body {
         min-height: 10vh;
         max-height: 100vh;
         min-width: 100px;
         justify-content: center;
     }
-    
-    .box-geral-app{
-        
+
+    .box-geral-app {
+
         width: 340px;
         margin: 30px 0 0 0;
     }
 
-    .titulo{
-        margin: 30px 0px; 
+    .titulo {
+        margin: 30px 0px;
     }
-    
-    .input-box{
+
+    .input-box {
         margin-left: -10px;
         margin-right: -10px;
         min-width: 100px;
         max-width: 400px;
         background-position-x: 15px;
-        #inserir-user{
+
+        #inserir-user {
             max-width: 200px;
             padding-left: 37px;
             font-size: 15px;
         }
-        #inserir-user::placeholder{
+
+        #inserir-user::placeholder {
             font-size: 12px;
             width: fit-content;
         }
-        .btn-pesquisar{
+
+        .btn-pesquisar {
             margin-left: -150px;
-            &:hover{
+
+            &:hover {
                 cursor: none;
                 background-color: #0079FF;
                 border-color: none;
@@ -396,28 +427,30 @@ body{
         }
     }
 
-    .sem-resultados{
+    .sem-resultados {
         position: relative;
         top: 11px;
         right: 85px;
         text-align: end;
         width: 55px;
     }
-    
-    .usuarios-box-externo{
+
+    .usuarios-box-externo {
         max-width: 400px;
         height: fit-content;
         margin: 0 -10px;
     }
 
-    .usuarios-box-interno{
+    .usuarios-box-interno {
         margin: 0;
         display: inline;
-        .cabecalho-perfil{
+
+        .cabecalho-perfil {
             justify-content: start;
             margin-left: 10px;
         }
-        .info-usuario{
+
+        .info-usuario {
             min-width: 40px;
             max-width: 250px;
             min-height: 10px;
@@ -426,54 +459,57 @@ body{
         }
     }
 
-    .dados-principais{
+    .dados-principais {
+
         .nome,
-        .user{
+        .user {
             max-height: 100px;
             width: 200px;
             padding-bottom: 1px;
         }
     }
 
-    .data-criacao-conta{
+    .data-criacao-conta {
         margin-top: -10px;
         max-width: 180px;
     }
 
-    #biografia{
+    #biografia {
         max-width: 300px;
         height: fit-content;
     }
 
-    .box-numeros-perfil{
+    .box-numeros-perfil {
         width: 300px;
         margin: 135px 20px 20px 20px;
     }
 
-    .texto{
+    .texto {
         font-size: 10px;
     }
 
-    #num{
+    #num {
         display: flex;
         font-size: 25px;
         justify-content: center;
     }
 
-    .rodape-box-geral{
+    .rodape-box-geral {
         width: 300px;
         margin-left: 35px;
         justify-content: start;
-        .rodape-perfil{
+
+        .rodape-perfil {
             display: block;
             margin-left: -15px;
         }
     }
 
     .coluna-1,
-    .coluna-2{
+    .coluna-2 {
         max-width: 250px;
         margin: 5px 0px;
+
         .localizacao,
         a.pagina-web,
         .twitter,

@@ -2,91 +2,129 @@
 <html lang="pt">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  <link rel="stylesheet" href="./css/style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible"
+          content="IE=edge">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap"
+          rel="stylesheet">
+    <link rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="./assets/favicon-32x32.png">
+    <link rel="stylesheet"
+          href="./css/style.css">
 
-  <title>Frontend Mentor | GitHub user search app</title>
+    <title>Frontend Mentor | GitHub user search app</title>
 
 </head>
 
 <body>
-  <main>
-    <div class="box-geral-app">
-      <div class="topo-box">
-        <h1 class="titulo">devfinder</h1>
-      </div>
-
-      <div class="input-box">
-        <input type="search" id="inserir-user" placeholder="Pesquise o username...">
-        <div class="sem-resultados">Não encontrado</div>
-        <button class="btn-pesquisar" id="pesquisar">Pesquisar</button>
-      </div>
-
-      <section class="usuarios-box-externo" id="hidden">
-        <div class="usuarios-box-interno">
-          <div class="cabecalho-perfil">
-            <img class="icon" src="./assets/favicon-32x32.png" alt="imagem do usuário">
-            <div class="info-usuario">
-              <div class="dados-principais">
-                <span class="nome">Nome</span>
-                <a href="" class="user">User</a>
-              </div>
-              <span class="data-criacao-conta">Desde 10 Jan 2022</span>
-              <span id="biografia">Lorsit amet consectetur
-                debitis ea repellat?.</span>
-
-            </div>
-          </div>
-
-          <div class="box-numeros-perfil">
-            <div class="numeros-perfil">
-              <p class="texto">Repositórios</p>
-              <span class="repositorio" id="num">1</span>
+    <main>
+        <div class="box-geral-app">
+            <div class="topo-box">
+                <h1 class="titulo">devfinder</h1>
             </div>
 
-            <div class="numeros-perfil">
-              <p class="texto">Seguidores</p>
-              <span class="seguidores" id="num">2</span>
+            <div class="input-box">
+                <input type="search"
+                       id="inserir-user"
+                       placeholder="Pesquise o username...">
+                <div class="sem-resultados">Não encontrado</div>
+                <button class="btn-pesquisar"
+                        id="pesquisar">Pesquisar</button>
             </div>
 
-            <div class="numeros-perfil">
-              <p class="texto">Seguindo</p>
-              <span class="seguindo" id="num">3</span>
-            </div>
-          </div>
+            <section class="usuarios-box-externo"
+                     id="hidden">
+                <div class="usuarios-box-interno">
+                    <div class="cabecalho-perfil">
+                        <img class="icon"
+                             src="./assets/favicon-32x32.png"
+                             alt="imagem do usuário">
+                        <div class="info-usuario">
+                            <div class="dados-principais">
+                                <span class="nome">Nome</span>
+                                <a href=""
+                                   class="user">User</a>
+                            </div>
+                            <span class="data-criacao-conta">Desde 10 Jan 2022</span>
+                            <span id="biografia">Lorsit amet consectetur
+                                debitis ea repellat?.</span>
 
-          <div class="rodape-box-geral">
-            <div class="rodape-perfil">
-              <div class="coluna-1">
-                <div class="img-padrao-icones"><img src="./assets/icon-location.svg" alt="icone da localizacao"></div>
-                <p class="localizacao">-</p>
+                        </div>
+                    </div>
 
-                <div class="img-padrao-icones"><img src="./assets/icon-website.svg" alt="icone website"></div>
-                <a href="" class="pagina-web">-</a>
-              </div>
+                    <div class="box-numeros-perfil">
+                        <div class="numeros-perfil">
+                            <p class="texto">Repositórios</p>
+                            <span class="repositorio"
+                                  id="num">1</span>
+                        </div>
 
+                        <div class="numeros-perfil">
+                            <p class="texto">Seguidores</p>
+                            <span class="seguidores"
+                                  id="num">2</span>
+                        </div>
 
-              <div class="coluna-2">
-                <div class="img-padrao-icones"><img src="./assets/icon-twitter.svg" alt="icone do twitter"></div>
-                <a href="" class="twitter" id="tt">-</a>
+                        <div class="numeros-perfil">
+                            <p class="texto">Seguindo</p>
+                            <span class="seguindo"
+                                  id="num">3</span>
+                        </div>
+                    </div>
 
-                <div class="img-padrao-icones"><img src="./assets/icon-company.svg" alt="icone da empresa"></div>
-                <p class="empresa">-</p>
-              </div>
-            </div>
-          </div>
+                    <div class="rodape-box-geral">
+                        <div class="rodape-perfil">
+                            <div class="coluna-1">
+                                <div class="img-padrao-icones">
+                                    <img class="icone"
+                                         src="./assets/icon-location.svg"
+                                         alt="icone da localizacao">
+                                </div>
+                                <p class="localizacao">-</p>
+
+                                <div class="img-padrao-icones">
+                                    <img class="icone"
+                                         src="./assets/icon-website.svg"
+                                         alt="icone website">
+                                </div>
+                                <a href=""
+                                   class="pagina-web">-</a>
+                            </div>
+
+                            <div class="coluna-2">
+                                <div class="img-padrao-icones">
+                                    <img class="icone"
+                                         src="./assets/icon-twitter.svg"
+                                         alt="icone do twitter">
+                                </div>
+                                <a href=""
+                                   class="twitter"
+                                   id="tt">-</a>
+
+                                <div class="img-padrao-icones">
+                                    <img class="icone"
+                                         src="./assets/icon-company.svg"
+                                         alt="icone da empresa">
+                                </div>
+                                <p class="empresa">-</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
-      </section>
-    </div>
-  </main>
+    </main>
 
-  <script src="./js/main.js"></script>
+    <script src="./js/main.js"></script>
 
 </body>
 
